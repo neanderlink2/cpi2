@@ -1,0 +1,155 @@
+body {
+    background-color: #f0f0f0;
+}
+
+section {
+    margin: 10px;
+}
+
+nav {
+    background-color: red !important;
+}
+
+.cards-centrais {
+    width: 350px;
+    height: 500px;
+}
+
+.cards-produtos {
+    width: 200px;
+    margin-right: 15px !important;
+    transition: 0.4s !important;
+}
+
+.cards-produtos:hover {
+    background-color: #c2c2c2;
+    cursor: pointer;
+}
+
+.container-wrapped {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    color: #424242;
+}
+
+.container-wrapped img {
+    margin-top: 40%;
+}
+
+.container-wrapped h2 {
+    margin-top: 50%;
+}
+
+.conteudo {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.secao-cor-diferente {
+    margin: 0 !important;
+    padding: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+    color: white;
+}
+
+.secao-cor-diferente input {
+    color: white;
+}
+
+.subheader {
+    margin-left: 15px;
+}
+
+/* label color */
+
+.input-field label {
+    color: #d2d2d2 !important;
+}
+
+/* label focus color */
+
+.input-field input:focus+label {
+    color: #fff !important;
+}
+
+/* label underline focus color */
+
+.input-field input:focus {
+    border-bottom: 1px solid #fff !important;
+    box-shadow: 0 1px 0 0 #fff !important;
+}
+
+/* label underline focus color */
+
+.input-field textarea:focus {
+    border-bottom: 1px solid #fff !important;
+    box-shadow: 0 1px 0 0 #fff !important;
+}
+
+/* valid color */
+
+.input-field input.valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+/* invalid color */
+
+.input-field input.invalid {
+    border-bottom: 1px solid #fb8c00 !important;
+    box-shadow: 0 1px 0 0 #fb8c00 !important;
+}
+
+/* invalid color */
+
+.input-field textarea.invalid {
+    border-bottom: 1px solid #fb8c00 !important;
+    box-shadow: 0 1px 0 0 #fb8c00 !important;
+}
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+    color: #fff !important;
+}
+
+.input-field .prefix {
+    color: #c2c2c2 !important;
+}
+
+#form-busca {
+    text-align: right;
+    margin-right: 15.5%;
+}
+
+#nav-mobile {
+    margin-left: 15%;
+}
+
+@media (max-width: 1500px) {
+    .container-wrapped {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 950px) {
+    .conteudo {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #section-produtos {
+        padding: 10px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #form-busca {
+        margin-right: 5.5%;
+    }
+    #nav-mobile {
+        margin-left: 5%;
+    }
+}

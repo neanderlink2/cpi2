@@ -1,43 +1,5 @@
 <!DOCTYPE html>
 <html>
-<style>
-    section {
-        margin: 10px;
-    }
-
-    .cards-centrais {
-        width: 350px;
-    }
-
-    .cards-produtos {
-        width: 200px;
-        margin-right: 15px !important;
-        transition: 0.4s !important;
-    }
-
-    .cards-produtos:hover {
-        background-color: #c2c2c2;
-        cursor: pointer;
-    }
-
-    .container-wrapped {
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 100%;
-        color: #424242;
-    }
-
-    .conteudo {
-        padding-left: 15%;
-        padding-right: 15%;
-    }
-
-    nav {
-        background-color: red !important;
-    }
-</style>
 
 <head>
     <meta charset="utf-8" />
@@ -45,127 +7,137 @@
     <title>Automação</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="src/css/materialize.min.css">
+    <link rel="stylesheet" href="src/css/main.css">
 </head>
 
 <body>
     <header>
+
         <ul id="drop-produtos" class="dropdown-content" style=" top: 15px !important;">
-            <li class="blue-text darken-2">
-                <a href="#">Segurança</a>
+            <li>
+                <a class="light-blue-text text-darken-3" href="#">Segurança</a>
             </li>
-            <li class="blue-text darken-2">
-                <a href="#">Gerência</a>
+            <li>
+                <a class="light-blue-text text-darken-3" href="#">Gerência</a>
             </li>
-            <li class="blue-text darken-2">
-                <a  href="#">Lazer</a>
+            <li>
+                <a class="light-blue-text text-darken-3" href="#">Lazer</a>
             </li>
         </ul>
-        <nav>
-            <div class="nav-wrapper light-blue darken-2">
-                <ul id="nav-mobile" class="left">
-                    <li>
-                        <a class="dropdown-trigger" href="#!" data-target="drop-produtos">Produtos
-                            <i class="material-icons right">arrow_drop_down</i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">Sobre nós</a>
-                    </li>
-                    <li>
-                        <a href="#">Contato</a>
-                    </li>
-                </ul>
-                <form style="text-align: right; margin-right: 15px;">
-                    <div class="input-field inline">
-                        <input id="email_inline" placeholder="" type="text" class="validate" style="color: white !important; border-bottom: 1px solid white !important;">
-                    </div>
-                    <button class="btn light-blue darken-4" type="submit">
-                        <i class="material-icons" style="line-height: 36px;">send</i>
-                    </button>
-                </form>
-
-            </div>
-
-        </nav>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper light-blue darken-3">
+                    <a href="#" class="brand-logo" style="margin-left: 40px;">Automação</a>
+                    <a href="#" data-target="sidenav-geral" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul id="nav-mobile" class="hide-on-med-and-down">
+                        <li>
+                            <a class="dropdown-trigger" href="#!" data-target="drop-produtos">Produtos
+                                <i class="material-icons right">arrow_drop_down</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#section-sobre">Sobre nós</a>
+                        </li>
+                        <li>
+                            <a href="#section-contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
 
 
+        <ul id="sidenav-geral" class="sidenav">
+            <li class="subheader">Produtos</li>
+            <li>
+                <a href="#">Segurança</a>
+            </li>
+            <li>
+                <a href="#">Gerência</a>
+            </li>
+            <li>
+                <a href="#">Lazer</a>
+            </li>
+            <li class="divider"></li>
+            <li class="subheader">Navegação</li>
+            <li>
+                <a href="#section-sobre">Sobre nós</a>
+            </li>
+            <li>
+                <a href="#section-contato">Contato</a>
+            </li>
+        </ul>
     </header>
     <section class="conteudo">
         <div class="container-wrapped">
             <div class="card blue-gray darken-1 cards-centrais">
                 <div class="card-content" style="text-align:center;">
-                    <img src="shield.png" />
+                    <img src="src/imgs/security.png" alt="Icone de Segurança" />
                     <h2 class="card-title" style="text-align: center;">Segurança</h2>
                 </div>
             </div>
             <div class="card blue-gray darken-1 cards-centrais">
                 <div class="card-content" style="text-align:center;">
-                    <img src="debt.png" />
+                    <img src="src/imgs/settings.png" alt="Ícone de Gerência" />
                     <h2 class="card-title" style="text-align: center;">Gerência</h2>
                 </div>
             </div>
             <div class="card blue-gray darken-1 cards-centrais">
                 <div class="card-content" style="text-align:center;">
-                    <img src="bowling.png" />
+                    <img src="src/imgs/control.png" alt="Ícone de Lazer" />
                     <h2 class="card-title" style="text-align: center;">Lazer</h2>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="background-color: red; margin: 0 !important; padding: 20px; padding-left: 15%; padding-right: 15%; color: white;"
-        class="light-blue darken-2">
+    <section id="section-produtos" class="secao-cor-diferente light-blue darken-2">
         <h3>Produtos</h3>
         <div class="container-wrapped" style="justify-content: space-around !important;">
             <div class="card blue-gray darken-1 cards-produtos">
                 <div class="card-content" style="text-align:center;">
-                    <img src="bowling.png" />
+                    <img src="src/imgs/bowling.png" />
                     <h2 class="card-title" style="text-align: center;">Produto 1</h2>
                 </div>
 
             </div>
             <div class="card blue-gray darken-1 cards-produtos">
                 <div class="card-content" style="text-align:center;">
-                    <img src="bowling.png" />
+                    <img src="src/imgs/bowling.png" />
                     <h2 class="card-title" style="text-align: center;">Produto 2</h2>
                 </div>
             </div>
             <div class="card blue-gray darken-1 cards-produtos">
                 <div class="card-content" style="text-align:center;">
-                    <img src="bowling.png" />
+                    <img src="src/imgs/bowling.png" />
                     <h2 class="card-title" style="text-align: center;">Produto 3</h2>
                 </div>
             </div>
             <div class="card blue-gray darken-1 cards-produtos">
                 <div class="card-content" style="text-align:center;">
-                    <img src="bowling.png" />
+                    <img src="src/imgs/bowling.png" />
                     <h2 class="card-title" style="text-align: center;">Produto 4</h2>
                 </div>
             </div>
             <div class="card blue-gray darken-1 cards-produtos">
                 <div class="card-content" style="text-align:center;">
-                    <img src="bowling.png" />
+                    <img src="src/imgs/bowling.png" />
                     <h2 class="card-title" style="text-align: center;">Produto 5</h2>
                 </div>
             </div>
             <div class="card blue-gray darken-1 cards-produtos">
                 <div class="card-content" style="text-align:center;">
-                    <img src="bowling.png" />
+                    <img src="src/imgs/bowling.png" />
                     <h2 class="card-title" style="text-align: center;">Produto 6</h2>
-                </div>
-            </div>
-            <div class="card blue-gray darken-1 cards-produtos">
-                <div class="card-content" style="text-align:center;">
-                    <img src="bowling.png" />
-                    <h2 class="card-title" style="text-align: center;">Produto 7</h2>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="conteudo">
+    <section id="section-sobre" class="conteudo" style="margin-bottom: 100px; margin-top: 100px;">
         <h3>Sobre a empresa</h3>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et tellus euismod, sagittis massa consectetur, hendrerit
@@ -176,36 +148,37 @@
         </p>
     </section>
 
-    <section class="conteudo">
+    <section id="section-contato" class="secao-cor-diferente light-blue darken-2 conteudo">
         <h3>Contato</h3>
         <span>Entre em contato com a gente, é só preencher o formulário e enviá-lo.</span>
         <form class="row">
             <div class="input-field col s6">
                 <i class="material-icons prefix">person</i>
-                <input id="nome" name="nome" type="text" class="validate">
+                <input id="nome" name="nome" type="text" class="validate" required>
                 <label for="nome">Nome:</label>
             </div>
             <div class="input-field col s6">
                 <i class="material-icons prefix">alternate_email</i>
-                <input id="email" name="email" type="text" class="validate">
+                <input id="email" name="email" type="email" class="validate" required>
                 <label for="email">E-mail:</label>
             </div>
             <div class="input-field col s12">
-                <textarea id="mensagem" class="materialize-textarea"></textarea>
+                <i class="material-icons prefix">message</i>
+                <textarea id="mensagem" class="materialize-textarea" required></textarea>
                 <label for="mensagem">Digite uma mensagem</label>
             </div>
             <div style="text-align: right;">
-                <button class="btn light-blue darken-2 waves-effect waves-light" type="reset">Apagar
+                <button class="btn red darken-2 waves-effect waves-light" type="reset">Apagar
                     <i class="material-icons right">close</i>
                 </button>
-                <button class="btn light-blue darken-2 waves-effect waves-light" type="submit">Enviar
+                <button class="btn green darken-2 waves-effect waves-light" type="submit">Enviar
                     <i class="material-icons right">send</i>
                 </button>
             </div>
         </form>
     </section>
 
-    <footer class="page-footer light-blue darken-2">
+    <footer class="page-footer light-blue darken-3" style="margin-top: 50px;">
         <div class="container">
             <div class="footer-copyright light-blue darken-4">
                 <div class="container">
@@ -216,13 +189,9 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".dropdown-trigger").dropdown();
-        });
-    </script>
+    <script src="src/js/jquery.js"></script>
+    <script src="src/js/materialize.min.js"></script>
+    <script src="src/js/main.js"></script>
 </body>
 
 </html>
