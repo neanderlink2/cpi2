@@ -11,55 +11,66 @@
     <link rel="stylesheet" href="src/css/main.css">
 </head>
 
-<body>
+<body class="blue-grey darken-3 white-text">
     <header>
-
         <ul id="drop-produtos" class="dropdown-content" style=" top: 15px !important;">
             <li>
-                <a class="light-blue-text text-darken-3" href="#">Segurança</a>
+                <a onclick="pesquisar('Segurança');" class="blue-grey-text text-darken-4" href="#">Segurança</a>
             </li>
             <li>
-                <a class="light-blue-text text-darken-3" href="#">Gerência</a>
+                <a onclick="pesquisar('Gerência');" class="blue-grey-text text-darken-4" href="#">Gerência</a>
             </li>
             <li>
-                <a class="light-blue-text text-darken-3" href="#">Lazer</a>
+                <a onclick="pesquisar('Lazer');" class="blue-grey-text text-darken-4" href="#">Lazer</a>
             </li>
         </ul>
         <div class="navbar-fixed">
             <nav>
-                <div class="nav-wrapper light-blue darken-3">
-                    <a href="#" class="brand-logo" style="margin-left: 40px;">Automação</a>
-                    <a href="#" data-target="sidenav-geral" class="sidenav-trigger">
-                        <i class="material-icons">menu</i>
-                    </a>
-                    <ul id="nav-mobile" class="hide-on-med-and-down">
-                        <li>
-                            <a class="dropdown-trigger" href="#!" data-target="drop-produtos">Produtos
-                                <i class="material-icons right">arrow_drop_down</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#section-sobre">Sobre nós</a>
-                        </li>
-                        <li>
-                            <a href="#section-contato">Contato</a>
-                        </li>
-                    </ul>
+                <div class="nav-wrapper blue-grey darken-4">
+                    <div id="navegacao">
+                        <a href="#" class="brand-logo left">My Safe House</a>
+                        <a href="#" data-target="sidenav-geral" class="sidenav-trigger">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <ul id="nav-mobile" class="hide-on-med-and-down">
+                            <li>
+                                <a class="dropdown-trigger" href="#!" data-target="drop-produtos">Produtos
+                                    <i class="material-icons right">arrow_drop_down</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#section-sobre">Sobre nós</a>
+                            </li>
+                            <li>
+                                <a href="#section-contato">Contato</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <form id="pesquisa">
+                        <div class="input-field">
+                            <input onkeyup="pesquisar($('#search').val());" id="search" type="search" required>
+                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                            <i onclick="esconderPesquisa();" class="material-icons">close</i>
+                        </div>
+                    </form>
+
+                    <a class="right" id="mostrar-pesquisa" style="margin-right: 20px;" onclick="mostrarPesquisa();"
+                        href="#!"><i class="material-icons">search</i></a>
                 </div>
             </nav>
         </div>
 
-
         <ul id="sidenav-geral" class="sidenav">
             <li class="subheader">Produtos</li>
             <li>
-                <a href="#">Segurança</a>
+                <a onclick="pesquisar('Segurança');" href="#">Segurança</a>
             </li>
             <li>
-                <a href="#">Gerência</a>
+                <a onclick="pesquisar('Gerência');" href="#">Gerência</a>
             </li>
             <li>
-                <a href="#">Lazer</a>
+                <a onclick="pesquisar('Lazer');" href="#">Lazer</a>
             </li>
             <li class="divider"></li>
             <li class="subheader">Navegação</li>
@@ -71,116 +82,103 @@
             </li>
         </ul>
     </header>
-    <section class="conteudo">
-        <div class="container-wrapped">
-            <div class="card blue-gray darken-1 cards-centrais">
-                <div class="card-content" style="text-align:center;">
-                    <img src="src/imgs/security.png" alt="Icone de Segurança" />
-                    <h2 class="card-title" style="text-align: center;">Segurança</h2>
-                </div>
-            </div>
-            <div class="card blue-gray darken-1 cards-centrais">
-                <div class="card-content" style="text-align:center;">
-                    <img src="src/imgs/settings.png" alt="Ícone de Gerência" />
-                    <h2 class="card-title" style="text-align: center;">Gerência</h2>
-                </div>
-            </div>
-            <div class="card blue-gray darken-1 cards-centrais">
-                <div class="card-content" style="text-align:center;">
-                    <img src="src/imgs/control.png" alt="Ícone de Lazer" />
-                    <h2 class="card-title" style="text-align: center;">Lazer</h2>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="section-produtos" class="secao-cor-diferente light-blue darken-2">
-        <h3>Produtos</h3>
-        <div class="container-wrapped" style="justify-content: space-around !important;">
-            <div class="card blue-gray darken-1 cards-produtos">
-                <div class="card-content" style="text-align:center;">
-                    <img src="src/imgs/bowling.png" />
-                    <h2 class="card-title" style="text-align: center;">Produto 1</h2>
-                </div>
-
-            </div>
-            <div class="card blue-gray darken-1 cards-produtos">
-                <div class="card-content" style="text-align:center;">
-                    <img src="src/imgs/bowling.png" />
-                    <h2 class="card-title" style="text-align: center;">Produto 2</h2>
-                </div>
-            </div>
-            <div class="card blue-gray darken-1 cards-produtos">
-                <div class="card-content" style="text-align:center;">
-                    <img src="src/imgs/bowling.png" />
-                    <h2 class="card-title" style="text-align: center;">Produto 3</h2>
-                </div>
-            </div>
-            <div class="card blue-gray darken-1 cards-produtos">
-                <div class="card-content" style="text-align:center;">
-                    <img src="src/imgs/bowling.png" />
-                    <h2 class="card-title" style="text-align: center;">Produto 4</h2>
-                </div>
-            </div>
-            <div class="card blue-gray darken-1 cards-produtos">
-                <div class="card-content" style="text-align:center;">
-                    <img src="src/imgs/bowling.png" />
-                    <h2 class="card-title" style="text-align: center;">Produto 5</h2>
-                </div>
-            </div>
-            <div class="card blue-gray darken-1 cards-produtos">
-                <div class="card-content" style="text-align:center;">
-                    <img src="src/imgs/bowling.png" />
-                    <h2 class="card-title" style="text-align: center;">Produto 6</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="section-sobre" class="conteudo" style="margin-bottom: 100px; margin-top: 100px;">
-        <h3>Sobre a empresa</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et tellus euismod, sagittis massa consectetur, hendrerit
-            dolor. Nulla ornare consequat nulla, sit amet eleifend purus scelerisque sodales. Cras nec enim facilisis, finibus
-            nibh ultricies, pretium metus. Vivamus sapien ex, aliquet at mollis sit amet, suscipit sit amet urna. Vivamus
-            sagittis vitae tellus et faucibus. In auctor justo vitae libero posuere laoreet. Nam lacinia tortor est, quis
-            tempor risus ultrices in.
-        </p>
-    </section>
-
-    <section id="section-contato" class="secao-cor-diferente light-blue darken-2 conteudo">
-        <h3>Contato</h3>
-        <span>Entre em contato com a gente, é só preencher o formulário e enviá-lo.</span>
-        <form class="row">
-            <div class="input-field col s6">
-                <i class="material-icons prefix">person</i>
-                <input id="nome" name="nome" type="text" class="validate" required>
-                <label for="nome">Nome:</label>
-            </div>
-            <div class="input-field col s6">
-                <i class="material-icons prefix">alternate_email</i>
-                <input id="email" name="email" type="email" class="validate" required>
-                <label for="email">E-mail:</label>
-            </div>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">message</i>
-                <textarea id="mensagem" class="materialize-textarea" required></textarea>
-                <label for="mensagem">Digite uma mensagem</label>
-            </div>
-            <div style="text-align: right;">
-                <button class="btn red darken-2 waves-effect waves-light" type="reset">Apagar
-                    <i class="material-icons right">close</i>
+    <section style="transition: 0.2s" id="corpo">
+        <section class="conteudo">
+            <div class="container-wrapped">
+                <button onclick="pesquisar('Segurança');" class="card blue-grey darken-4 white-text waves-effect waves-light cards-centrais">
+                    <div class="card-content" style="text-align:center;">
+                        <!-- <img src="src/imgs/security.png" alt="Icone de Segurança" /> -->
+                        <i class="material-icons" style="font-size: 96px; margin-top: 10%;">security</i>
+                        <h2 class="card-title" style="text-align: center;">Segurança</h2>
+                    </div>
                 </button>
-                <button class="btn green darken-2 waves-effect waves-light" type="submit">Enviar
-                    <i class="material-icons right">send</i>
+                <button onclick="pesquisar('Gerência');" class="card blue-grey darken-4 white-text waves-effect waves-light cards-centrais">
+                    <div class="card-content" style="text-align:center;">
+                        <!-- <img src="src/imgs/settings.png" alt="Ícone de Gerência" /> -->
+                        <i class="material-icons" style="font-size: 96px; margin-top: 10%;">settings</i>
+                        <h2 class="card-title" style="text-align: center;">Gerência</h2>
+                    </div>
+                </button>
+                <button onclick="pesquisar('Lazer');" class="card blue-grey darken-4 white-text waves-effect waves-light cards-centrais">
+                    <div class="card-content" style="text-align:center;">
+                        <!-- <img src="src/imgs/control.png" alt="Ícone de Lazer" /> -->
+                        <i class="material-icons" style="font-size: 96px; margin-top: 10%;">videogame_asset</i>
+                        <h2 class="card-title" style="text-align: center;">Lazer</h2>
+                    </div>
                 </button>
             </div>
-        </form>
+        </section>
+
+        <section class="secao-cor-diferente blue-grey" id="produtos">
+            <div style="display: inline-flex; flex-direction: row; justify-content: flex-start; align-items: center; width: 100%;">
+                <button id="botao-voltar" onclick="esconderPesquisa();" class="btn-flat white-text" style="margin-top: 17px; padding: 0 5px;">
+                    <i class="material-icons" style="font-size: 36px;">arrow_back</i>
+                </button>
+                <h3 class="">Produtos</h3>
+            </div>
+
+            <div class="row" id="section-produtos"></div>
+        </section>
+
+        <section id="section-sobre" class="conteudo" style="margin-bottom: 100px; margin-top: 100px;">
+            <h3>Sobre a empresa</h3>
+            <h5>Equipe composta por:</h5>
+            <ul>
+                <li>Neander Wendel Nobre Teixeira</li>
+                <li>Thiago Marinho</li>
+                <li>Hugo</li>
+            </ul>
+            <p>            
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et tellus euismod, sagittis massa
+                consectetur, hendrerit
+                dolor. Nulla ornare consequat nulla, sit amet eleifend purus scelerisque sodales. Cras nec enim
+                facilisis,
+                finibus
+                nibh ultricies, pretium metus. Vivamus sapien ex, aliquet at mollis sit amet, suscipit sit amet urna.
+                Vivamus
+                sagittis vitae tellus et faucibus. In auctor justo vitae libero posuere laoreet. Nam lacinia tortor
+                est,
+                quis
+                tempor risus ultrices in.
+            </p>
+        </section>
+
+        <section id="section-contato" class="secao-cor-diferente blue-grey conteudo">
+            <h3>Contato</h3>
+            <span>Entre em contato com a gente, é só preencher o formulário e enviá-lo.</span>
+            <form class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">person</i>
+                    <input id="nome" name="nome" type="text" class="validate" required>
+                    <label for="nome">Nome:</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">alternate_email</i>
+                    <input id="email" name="email" type="email" class="validate" required>
+                    <label for="email">E-mail:</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">message</i>
+                    <textarea id="mensagem" class="materialize-textarea" required></textarea>
+                    <label for="mensagem">Mensagem:</label>
+                </div>
+                <div style="text-align: right;">
+                    <button class="btn red darken-2 waves-effect waves-light" type="reset">Apagar
+                        <i class="material-icons right">close</i>
+                    </button>
+                    <button class="btn green darken-2 waves-effect waves-light" type="submit">Enviar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </form>
+        </section>
     </section>
 
-    <footer class="page-footer light-blue darken-3" style="margin-top: 50px;">
+
+    <footer class="page-footer blue-grey darken-4" style="margin-top: 50px;">
         <div class="container">
-            <div class="footer-copyright light-blue darken-4">
+            <div class="footer-copyright blue-grey">
                 <div class="container">
                     Todos os direitos reservados
                     <a class="grey-text text-lighten-4 right" href="#!">IFB Students 2018</a>
@@ -189,6 +187,26 @@
         </div>
     </footer>
 
+    <div id="modal-produto-detalhes" class="modal blue-grey darken-4">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col s3">
+                    <img id="imagem" src="src/imgs/arduino.jpg" style="max-width: 100%; max-height: 150px;" />
+                </div>
+                <div class="col s9">
+                    <h4 id="nome">Nome do produto</h4>
+                </div>
+            </div>
+            <p id="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore, labore autem illum
+                doloremque dolor ex eos adipisci voluptas perferendis ea iste ipsum eius laudantium asperiores odit
+                nam, a voluptatem.</p>
+            <p id="valor" class="yellow-text text-darken-2" style="text-align: right; font-size: 28px; margin: 0;">R$
+                00,00</p>
+        </div>
+        <div class="modal-footer blue-grey darken-4">
+            <a href="#!" class="modal-close waves-effect waves-light btn-flat white-text">Fechar</a>
+        </div>
+    </div>
     <script src="src/js/jquery.js"></script>
     <script src="src/js/materialize.min.js"></script>
     <script src="src/js/main.js"></script>

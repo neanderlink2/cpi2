@@ -1,22 +1,17 @@
-body {
-    background-color: #f0f0f0;
-}
-
-section {
-    margin: 10px;
-}
-
-nav {
-    background-color: red !important;
+.cor-principal {
+    background-color: #474030;
 }
 
 .cards-centrais {
-    width: 350px;
+    width: 300px;
     height: 500px;
+    border: none !important;
+    cursor: pointer;
 }
 
 .cards-produtos {
-    width: 200px;
+    width: 200px;    
+    border: none !important;
     margin-right: 15px !important;
     transition: 0.4s !important;
 }
@@ -44,15 +39,15 @@ nav {
 }
 
 .conteudo {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .secao-cor-diferente {
     margin: 0 !important;
     padding: 20px;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
     color: white;
 }
 
@@ -121,18 +116,20 @@ nav {
     color: #c2c2c2 !important;
 }
 
-#form-busca {
-    text-align: right;
-    margin-right: 15.5%;
+.brand-logo {
+    margin-left: 20px !important;     
 }
 
-#nav-mobile {
-    margin-left: 15%;
+#nav-mobile  {
+    margin-left: 17%;
 }
 
 @media (max-width: 1500px) {
     .container-wrapped {
         justify-content: space-around;
+    }    
+    #nav-mobile  {
+        margin-left: 23%;
     }
 }
 
@@ -140,6 +137,15 @@ nav {
     .conteudo {
         padding-left: 5%;
         padding-right: 5%;
+    }
+    .cards-centrais {
+        width: 200px;
+        height: 275px;
+    }
+    .brand-logo {
+        margin: 0;
+        padding: 0;
+        left: 10% !important;        
     }
     #section-produtos {
         padding: 10px;
